@@ -1,0 +1,82 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Cashin_model extends CI_Model
+{
+    private $_table = "cashin";
+
+    public $member_id;
+    public $cashin_id;
+    public $description;
+    public $jumlah_ci;
+    public $tanggal_ci;
+
+    public function rules()
+    {
+        return [
+            ['field' => 'description',
+            'label' => 'Description',
+            'rules' => 'required'],
+
+            ['field' => 'jumlah_ci',
+            'label' => 'Jumlah CI',
+            'rules' => 'numeric'],
+
+            ['field' => 'tanggal_ci',
+            'label' => 'Tanggal_CI',
+            'rules' => 'required']
+        ];
+    }
+
+    public function getAll()
+    {
+        $this->db->select('*');
+        $this->db->from($this->_table);
+        $this->db->join('member', 'member.member_id = cashin.member_id', 'left');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    
+    public function getById($id)
+    {
+        return $this->db->get_where($this->_table, ["cashin_id" => $id])->row();
+    }
+
+        public function getByIdJoin($id)
+    {
+        $this->db->select('*');
+        $this->db->from($this->_table);
+        $this->db->join('member', 'member.cashin_id = cashin.member_id', 'left');
+        $this->db->where('cashin.cashin_id', $id);
+        $query = $this->db->get();
+        return $query->row();
+    }
+
+    public function save()
+    {
+        $post = $this->input->post();
+        $this->cashin_id = uniqid();
+        $this->member_id = $post["member_id"];
+        $this->nama = $post["nama"];
+        $this->description = $post["description"];
+        $this->jumlah_ci = $post["jumlah_ci"];
+        $this->tanggal_ci = $post["tanggal_ci"];
+        return $this->db->insert($this->_table, $this);
+    }
+
+    public function update($post)
+    {
+        $post = $this->input->post();
+        $this->member_id = $post["cashin_id"];
+        $this->member_id = $post["member_id"];
+        $this->nama = $post["nama"];
+        $this->description = $post["description"];
+        $this->jumlah_ci = $post["jumlah_ci"];
+        $this->tanggal_ci = $post["tanggal_ci"];
+        return $this->db->update($this->_table, $this, array('cashin_id' => $post['cashin_id']));
+    }
+
+    public function delete($id)
+    {
+        return $this->db->delete($this->_table, array("cashin_id" => $id));
+    }
+}
