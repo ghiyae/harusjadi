@@ -34,6 +34,16 @@
               <td><?php echo $dt->description ?></td>
               <td><?php echo $dt->tanggal_ci ?></td>
               <td>
+                <a href="<?php echo base_url('cashin/edit/'.$dt->cashin_id)?>" class="btn btn-success btn-icon-split">
+                  <span class="icon text-white-50">
+                    <i class="fas fa-edit"></i>
+                  </span>
+                  <span class="text">Edit</span></a>
+                  <a onclick="deleteConfirm('<?=site_url('cashin/delete/'.$dt->cashin_id)?>')" href="#!" class="btn btn-danger btn-icon-split">
+                    <span class="icon text-white-50">
+                      <i class="fas fa-trash"></i>
+                    </span>
+                    <span class="text">Delete</span></a></td>
               </tr>
             <?php } ?>
           </tbody>

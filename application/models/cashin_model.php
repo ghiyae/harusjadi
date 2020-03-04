@@ -13,16 +13,20 @@ class Cashin_model extends CI_Model
     public function rules()
     {
         return [
+            ['field' => 'nama',
+            'label' => 'Nama',
+            'rules' => 'required'],
+
             ['field' => 'description',
             'label' => 'Description',
             'rules' => 'required'],
 
-            ['field' => 'jumlah_ci',
-            'label' => 'Jumlah CI',
+            ['field' => 'jumlah',
+            'label' => 'Jumlah',
             'rules' => 'numeric'],
 
-            ['field' => 'tanggal_ci',
-            'label' => 'Tanggal_CI',
+            ['field' => 'tanggal',
+            'label' => 'Tanggal',
             'rules' => 'required']
         ];
     }
@@ -55,11 +59,10 @@ class Cashin_model extends CI_Model
     {
         $post = $this->input->post();
         $this->cashin_id = uniqid();
-        $this->member_id = $post["member_id"];
-        $this->nama = $post["nama"];
+        $this->member_id = $post["nama"];
         $this->description = $post["description"];
-        $this->jumlah_ci = $post["jumlah_ci"];
-        $this->tanggal_ci = $post["tanggal_ci"];
+        $this->jumlah_ci = $post["jumlah"];
+        $this->tanggal_ci = $post["tanggal"];
         return $this->db->insert($this->_table, $this);
     }
 
