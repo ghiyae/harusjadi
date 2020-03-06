@@ -15,6 +15,7 @@
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <thead>
           <tr>
+            <th>No</th>
             <th>Nama</th>
             <th>Golongan</th>
             <th>Jumlah</th>
@@ -28,6 +29,7 @@
           $no=1;
           foreach ($cashin as $dt) {?>
             <tr>
+              <td><?php echo $no++ ?></td>
               <td><?php echo $dt->nama ?></td>
               <td><?php echo $dt->golongan ?></td>
               <td><?php echo $dt->jumlah_ci ?></td>

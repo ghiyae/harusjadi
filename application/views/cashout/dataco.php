@@ -1,17 +1,15 @@
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
-  <div class="card-header py-3 d-flex">
-    <h6 class="m-0 font-weight-bold text-primary">Data Cash Out</h6>
-
-
-    <a href="<?php echo base_url('cashout/add')?>" class="btn btn-success btn-icon-split" style="margin-left: 53em">
-      <span class="icon text-white-50">
-        <i class="fas fa-plus"></i>
-      </span>
-      <span class="text">Create</span>
-    </a>
-
+ <!-- Card Header - Dropdown -->
+ <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+  <h6 class="m-0 font-weight-bold text-primary">Data Cash Out</h6>
+  <a href="<?php echo base_url('cashco/add')?>" class="btn btn-primary btn-icon-split">
+    <span class="icon text-white-50">
+      <i class="fas fa-plus"></i>
+    </span>
+    <span class="text">Add</span></a>   
   </div>
+
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
