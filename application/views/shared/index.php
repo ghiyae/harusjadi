@@ -11,6 +11,8 @@
 
   <title>E-Cash Purchasing</title>
 
+  <link rel="icon" type="image/png" href="<?php echo base_url() ?>/favicon.png">
+
   <!-- Custom fonts for this template-->
   <link href="<?php echo base_url('assets/fontawesome-free/css/all.min.css')?>" rel="stylesheet" type="text/css">
 
