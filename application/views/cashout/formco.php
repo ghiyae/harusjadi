@@ -49,24 +49,3 @@
     </form>
   </div>
 </div>
-
-
-
-<script type="text/javascript">
-  $(document).ready(function(){
-    $('#nama').change(function(){
-      var id=$(this).val();
-      $.ajax({
-        url : "<?php echo base_url('cashin/getMember'); ?>",
-        method : "POST",
-        data : {id: id},
-        dataType : 'json',
-        success:function(data){ 
-          var   obj= data;
-          $('#golongan').val(obj.golongan);
-          $('#jumlah').val(obj.jumlah);
-        }
-      });
-    });
-  });
-</script>
