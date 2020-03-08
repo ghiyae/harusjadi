@@ -111,8 +111,9 @@
                 <div class="input-group-append">
                 </div>
               </div>
+              <h3><font face="font_family" color="blue">E-CASH PURCHASING</font></h3>
             </form>
-            <h3><font face="font_family" color="blue">E-CASH PURCHASING</font></h3>
+            
             
             <!-- Topbar Navbar -->
             <ul class="navbar-nav ml-auto">
