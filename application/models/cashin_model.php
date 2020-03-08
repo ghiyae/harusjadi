@@ -82,4 +82,13 @@ class Cashin_model extends CI_Model
     {
         return $this->db->delete($this->_table, array("cashin_id" => $id));
     }
+
+    public function sum_cashin()
+    {
+        $this->db->select('sum(jumlah_ci) as jml');
+        $this->db->from($this->_table);
+        $query= $this->db->get();
+        $hasil=$query->row();
+        return $hasil->jml;
+    }
 }

@@ -82,4 +82,13 @@ class Cashout_model extends CI_Model
     {
         return $this->db->delete($this->_table, array("cashout_id" => $id));
     }
+
+    public function sum_cashout()
+    {
+        $this->db->select('sum(jumlah_co) as jml');
+        $this->db->from($this->_table);
+        $query= $this->db->get();
+        $hasil=$query->row();
+        return $hasil->jml;
+    }
 }
