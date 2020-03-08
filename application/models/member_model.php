@@ -67,4 +67,13 @@ class Member_model extends CI_Model
     {
         return $this->db->delete($this->_table, array("member_id" => $id));
     }
+
+    public function sum_member()
+    {
+        $this->db->select('count(member_id) as jml');
+        $this->db->from($this->_table);
+        $query= $this->db->get();
+        $hasil=$query->row();
+        return $hasil;
+    }
 }

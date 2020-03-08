@@ -5,6 +5,8 @@ class Dashboard extends CI_Controller {
 
 	public function index()
 	{
-		$this->template->load('shared/index', 'dashboard/dashboard');
+		$this->load->model('member_model');
+		$data ['member']= $this->member_model->sum_member();
+		$this->template->load('shared/index', 'dashboard/dashboard',$data);
 	}
 }
