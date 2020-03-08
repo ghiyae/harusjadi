@@ -23,7 +23,7 @@ class Cashout_model extends CI_Model
 
             ['field' => 'jumlah',
             'label' => 'Jumlah',
-            'rules' => 'numeric'],
+            'rules' => 'numeric|required'],
 
             ['field' => 'tanggal',
             'label' => 'Tanggal',
