@@ -63,7 +63,8 @@ class Cashin extends CI_Controller {
             redirect('cashin','refresh');
         }
     }
-    $data['cashin'] = $this->cashin_model->getById($id);
+    $data['cashin'] = $this->cashin_model->getByIdJoin($id);
+    $data['member'] = $this->member_model->getAll();
     if (!$data['cashin']) {
         $this->session->set_flashdata('error', 'Data Cash In Tidak ditemukan!');
         redirect('cashin','refresh');

@@ -8,7 +8,7 @@
 
                     <form method="post" action="">
                       <div class="form-row">
-                        <div class="form-group col-md-12">
+                        <div class="form-group col-md-6">
                           <label for="category">Category</label>
                           <input type="text" class="form-control <?php echo form_error('category')?'is-invalid':'' ?>" id="category" name="category" >
                           <div class="invalid-feedback">

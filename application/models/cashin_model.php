@@ -49,7 +49,7 @@ class Cashin_model extends CI_Model
     {
         $this->db->select('*');
         $this->db->from($this->_table);
-        $this->db->join('member', 'member.cashin_id = cashin.member_id', 'left');
+        $this->db->join('member', 'member.member_id = cashin.member_id', 'left');
         $this->db->where('cashin.cashin_id', $id);
         $query = $this->db->get();
         return $query->row();
@@ -69,12 +69,11 @@ class Cashin_model extends CI_Model
     public function update($post)
     {
         $post = $this->input->post();
-        $this->member_id = $post["cashin_id"];
-        $this->member_id = $post["member_id"];
-        $this->nama = $post["nama"];
+        $this->cashin_id = $post["cashin_id"];
+        $this->member_id = $post["nama"];
         $this->description = $post["description"];
-        $this->jumlah_ci = $post["jumlah_ci"];
-        $this->tanggal_ci = $post["tanggal_ci"];
+        $this->jumlah_ci = $post["jumlah"];
+        $this->tanggal_ci = $post["tanggal"];
         return $this->db->update($this->_table, $this, array('cashin_id' => $post['cashin_id']));
     }
 

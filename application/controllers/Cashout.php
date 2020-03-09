@@ -64,6 +64,7 @@ class Cashout extends CI_Controller {
         }
     }
     $data['cashout'] = $this->cashout_model->getById($id);
+    $data ['category'] = $this->category_model->getAll();
     if (!$data['cashout']) {
         $this->session->set_flashdata('error', 'Data Cash Out Tidak ditemukan!');
         redirect('cashout','refresh');

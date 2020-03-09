@@ -9,7 +9,7 @@
 
     <form method="post" action="">
       <div class="form-row">
-        <div class="form-group col-md-12">
+        <div class="form-group col-md-6">
           <label for="category">Category</label>
           <input type="hidden" value="<?=$category->category_id?>" class="form-control" id="category_id" name="category_id">
           <input type="text" value="<?=$this->input->post('category')? $this->input->post('category'):$category->category?>" class="form-control <?php echo form_error('category')?'is-invalid':'' ?>" id="category" name="category" >
