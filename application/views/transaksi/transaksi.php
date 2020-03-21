@@ -1,4 +1,3 @@
-<?php var_dump($transaksi) ?>
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
  <!-- Card Header - Dropdown -->
@@ -29,7 +28,7 @@
                 <th>Description</th>
                 <th>In</th>
                 <th>Out</th>
-                <th>Saldo</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
