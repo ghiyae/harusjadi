@@ -49,7 +49,7 @@ class transaksi_model extends CI_Model
         $this->tanggal = $post["tanggal"];
         $this->description = $post["description"];
         $this->tran_in = $post["tran_in"];
-        $this->tran_in = $post["tran_out"];
+        $this->tran_out = $post["tran_out"];
         return $this->db->insert($this->_table, $this);
     }
 
@@ -60,7 +60,7 @@ class transaksi_model extends CI_Model
         $this->tanggal = $post["tanggal"];
         $this->description = $post["description"];
         $this->tran_in = $post["tran_in"];
-        $this->tran_in = $post["tran_out"];
+        $this->tran_out = $post["tran_out"];
         return $this->db->update($this->_table, $this, array('tran_id' => $post['tran_id']));
     }
 
