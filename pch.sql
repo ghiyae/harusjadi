@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2020 at 01:18 PM
+-- Generation Time: Mar 21, 2020 at 05:11 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -61,8 +61,8 @@ CREATE TABLE IF NOT EXISTS `cashout` (
 --
 
 INSERT INTO `cashout` (`cashout_id`, `category_id`, `description`, `jumlah_co`, `tanggal_co`) VALUES
-('1', '5e57d6e434ed8', 'kondangan', 200000, '2020-03-08'),
-('5e6479102c940', '5e57d233e6950', 'sukarela', 100000, '2020-03-09');
+('5e6479102c940', '5e57d233e6950', 'sukarela', 100000, '2020-03-09'),
+('5e75d72d38792', '5e57d233e6950', 'kondangan', 50000, '2020-03-21');
 
 -- --------------------------------------------------------
 
@@ -129,17 +129,24 @@ INSERT INTO `member` (`member_id`, `nama`, `jabatan`, `golongan`, `jumlah`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `recap`
+-- Table structure for table `trans`
 --
 
-CREATE TABLE IF NOT EXISTS `recap` (
+CREATE TABLE IF NOT EXISTS `trans` (
+  `tran_id` varchar(10) NOT NULL,
   `tanggal` date NOT NULL,
   `description` varchar(225) NOT NULL,
-  `in` int(10) NOT NULL,
-  `out` int(10) NOT NULL,
-  `saldo` int(10) NOT NULL,
-  `id_recap` varchar(50) NOT NULL
+  `tran_in` int(10) NOT NULL,
+  `tran_out` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `trans`
+--
+
+INSERT INTO `trans` (`tran_id`, `tanggal`, `description`, `tran_in`, `tran_out`) VALUES
+('5e76386bd6', '2020-03-21', 'kas pch', 50000, 20000),
+('5e763b9b88', '2020-03-21', 'kas', 50000, 10000);
 
 --
 -- Indexes for dumped tables
@@ -176,10 +183,10 @@ ALTER TABLE `member`
  ADD PRIMARY KEY (`member_id`);
 
 --
--- Indexes for table `recap`
+-- Indexes for table `trans`
 --
-ALTER TABLE `recap`
- ADD PRIMARY KEY (`id_recap`);
+ALTER TABLE `trans`
+ ADD PRIMARY KEY (`tran_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
