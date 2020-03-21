@@ -75,7 +75,7 @@
               <a class="collapse-item" href="<?php echo base_url('category')?>"><i class="fas fa-bars"></i>Categoty</a>
               <a class="collapse-item" href="<?php echo base_url('cashin')?>"><i class="fa fa-book"></i>Cash In</a>
               <a class="collapse-item" href="<?php echo base_url('cashout')?>"><i class="fas fa-dolly"></i>Cash Out</a>
-              <a class="collapse-item" href="<?php echo base_url('recap')?>"><i class="fas fa-chart-bar"></i>Recapitulation</a>
+              <a class="collapse-item" href="<?php echo base_url('transaksi')?>"><i class="fas fa-money-bill-wave"></i>Transaction</a>
             </div>
           </div>
         </li>

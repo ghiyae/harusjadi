@@ -10,6 +10,7 @@ class Dashboard extends CI_Controller {
 		$this->load->model('member_model');
 		$this->load->model('cashin_model');
 		$this->load->model('cashout_model');
+		$this->load->model('transaksi_model');
 
 	}
 
