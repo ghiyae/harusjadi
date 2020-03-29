@@ -18,7 +18,6 @@ class Transaksi extends CI_Controller {
 
     public function add()
     {
-
         $this->form_validation->set_message('required','%s Tidak Boleh Kosong!!!');
         $this->form_validation->set_message('numeric','%s Harus Berupa Angka!!!');   
         $transaksi = $this->transaksi_model;
@@ -35,7 +34,6 @@ class Transaksi extends CI_Controller {
                 $this->session->set_flashdata('success', 'Data Transaksi Cash In Berhasil Ditambahkan!');
                 redirect('transaksi','refresh');
             }
-            
         }  
     }
 

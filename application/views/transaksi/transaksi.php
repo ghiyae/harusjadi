@@ -1,3 +1,4 @@
+<?php var_dump($transaksi) ?>
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
  <!-- Card Header - Dropdown -->
@@ -28,19 +29,23 @@
                 <th>Description</th>
                 <th>In</th>
                 <th>Out</th>
+                <th>Saldo</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
                         <?php 
           $no=1;
-          foreach ($transaksi as $key) {?>
+          $saldo=0;
+          foreach ($transaksi as $key) {
+          $saldo =$saldo + $key->tran_in -  $key->tran_out; ?>
               <tr>
               <td><?php echo $no++ ?></td>
               <td><?php echo $key->tanggal ?></td>
               <td><?php echo $key->description ?></td>
-              <td><?php echo $key->tran_in ?></td>
-              <td><?php echo $key->tran_out ?></td>
+              <td><?php echo number_format($key->tran_in)?></td>
+              <td><?php echo number_format($key->tran_out) ?></td>
+              <td><?php echo  number_format($saldo)?></td>
                 <td>
                 <a href="<?php echo base_url('transaksi/edit/'.$key->tran_id)?>" class="btn btn-success btn-icon-split">
                   <span class="icon text-white-50">

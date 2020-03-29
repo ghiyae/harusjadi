@@ -34,7 +34,13 @@ class transaksi_model extends CI_Model
 
     public function getAll()
     {
-        return $this->db->get($this->_table)->result();
+        $saldo = 0;
+        $this->db->from('trans');
+        $this->db->select('*');
+        $this->db->order_by('tanggal','ASC');
+
+		$query = $this->db->get();
+		return$query->result();
     }
     
     public function getById($id)
