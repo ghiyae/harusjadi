@@ -30,7 +30,7 @@
         <div class="row no-gutters align-items-center">
           <div class="col mr-2">
             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Jumlah Cashin</div>
-            <div class="h5 mb-0 font-weight-bold text-gray-800">Rp. <?= $cashin ?></div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">Rp. <?= number_format ($cashin) ?></div>
           </div>
           <div class="col-auto">
             <i class="fas fa-money-bill-wave fa-2x text-gray-300"></i>
@@ -49,7 +49,7 @@
             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Jumlah Cashout</div>
             <div class="row no-gutters align-items-center">
               <div class="col-auto">
-                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Rp. <?= $cashout ?></div>
+                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Rp. <?= number_format ($cashout) ?></div>
               </div>
             </div>
           </div>
@@ -67,8 +67,8 @@
       <div class="card-body">
         <div class="row no-gutters align-items-center">
           <div class="col mr-2">
-            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Requests</div>
-            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Saldo</div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">Rp. <?= number_format ($cashin - $cashout) ?></div>
           </div>
           <div class="col-auto">
             <i class="fas fa-receipt fa-2x text-gray-300"></i>

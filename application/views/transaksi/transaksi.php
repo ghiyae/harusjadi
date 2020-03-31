@@ -1,4 +1,3 @@
-<?php var_dump($transaksi) ?>
 <!-- DataTales Example -->
 <div class="card shadow mb-4">
  <!-- Card Header - Dropdown -->
@@ -10,16 +9,16 @@
   <div class="card-body">
     <div class="table-responsive">
 
-      <a href="<?php echo base_url('transaksi/add')?>" class="btn btn-success btn-icon-split">
+      <a href="<?php echo base_url('transaksi/add')?>" class="btn btn-primary btn-icon-split">
         <span class="icon text-white-50">
-          <i class="fas fa-sign-in-alt"></i>
+          <i class="fas fa-plus"></i>
         </span>
-        <span class="text">Add Cash In</span></a> 
-        <a href="<?php echo base_url('transaksi/add')?>" class="btn btn-warning btn-icon-split">
+        <span class="text">Add In/Out</span></a> 
+        <!-- <a href="<?php echo base_url('transaksi/add')?>" class="btn btn-warning btn-icon-split">
           <span class="icon text-white-50">
             <i class="fas fa-sign-out-alt"></i>
           </span>
-          <span class="text">Add Cash Out</span></a>  
+          <span class="text">Add Cash Out</span></a> -->  
           <hr>
           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>
@@ -45,7 +44,7 @@
               <td><?php echo $key->description ?></td>
               <td><?php echo number_format($key->tran_in)?></td>
               <td><?php echo number_format($key->tran_out) ?></td>
-              <td><?php echo  number_format($saldo)?></td>
+              <td><?php echo number_format($saldo)?></td>
                 <td>
                 <a href="<?php echo base_url('transaksi/edit/'.$key->tran_id)?>" class="btn btn-success btn-icon-split">
                   <span class="icon text-white-50">
