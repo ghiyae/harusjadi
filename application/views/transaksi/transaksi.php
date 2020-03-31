@@ -11,14 +11,14 @@
 
       <a href="<?php echo base_url('transaksi/add')?>" class="btn btn-primary btn-icon-split">
         <span class="icon text-white-50">
-          <i class="fas fa-plus"></i>
+          <i class="fas fa-sign-in-alt"></i>
         </span>
-        <span class="text">Add In/Out</span></a> 
-        <!-- <a href="<?php echo base_url('transaksi/add')?>" class="btn btn-warning btn-icon-split">
+        <span class="text">Cash In</span></a> 
+        <a href="<?php echo base_url('transaksi/adding')?>" class="btn btn-warning btn-icon-split">
           <span class="icon text-white-50">
             <i class="fas fa-sign-out-alt"></i>
           </span>
-          <span class="text">Add Cash Out</span></a> -->  
+          <span class="text">Cash Out</span></a>  
           <hr>
           <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
             <thead>

@@ -19,6 +19,8 @@ class Dashboard extends CI_Controller {
 		$data ['member']= $this->member_model->sum_member();
 		$data ['cashin']= $this->cashin_model->sum_cashin();
 		$data ['cashout']= $this->cashout_model->sum_cashout();
+		$data ['transaksi']= $this->transaksi_model->sum_tran_in();
+		$data ['trans']= $this->transaksi_model->sum_tran_out();
 		$this->template->load('shared/index', 'dashboard/dashboard',$data);
 	}
 }

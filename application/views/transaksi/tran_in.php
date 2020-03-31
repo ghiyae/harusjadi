@@ -1,7 +1,7 @@
               <!-- Basic Card Example -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Form Input Cash In/Cash Out</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Form Input Cash In</h6>
                 </div>
 
                 <div class="card-body">
@@ -30,8 +30,8 @@
                         </div>
                       </div>
                       <div class="form-group col-md-6">
-                        <label for="tran_out">Tran_Out</label>
-                        <input type="text" class="form-control <?php echo form_error('tran_out')?'is-invalid':'' ?>" id="tran_out" name="tran_out">
+                        <!-- <label for="tran_out">Tran_Out</label> -->
+                        <input type="hidden" value="0" class="form-control <?php echo form_error('tran_out')?'is-invalid':'' ?>" id="tran_out" name="tran_out">
                         <div class="invalid-feedback">
                           <?php echo form_error('tran_out') ?>
                         </div>

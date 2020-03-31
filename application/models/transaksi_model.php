@@ -39,8 +39,8 @@ class transaksi_model extends CI_Model
         $this->db->select('*');
         $this->db->order_by('tanggal','ASC');
 
-		$query = $this->db->get();
-		return$query->result();
+        $query = $this->db->get();
+        return$query->result();
     }
     
     public function getById($id)
@@ -73,5 +73,23 @@ class transaksi_model extends CI_Model
     public function delete($id)
     {
         return $this->db->delete($this->_table, array("tran_id" => $id));
+    }
+
+    public function sum_tran_in()
+    {
+        $this->db->select('sum(tran_in) as jml');
+        $this->db->from($this->_table);
+        $query= $this->db->get();
+        $hasil=$query->row();
+        return $hasil->jml;
+    }
+
+        public function sum_tran_out()
+    {
+        $this->db->select('sum(tran_out) as jml');
+        $this->db->from($this->_table);
+        $query= $this->db->get();
+        $hasil=$query->row();
+        return $hasil->jml;
     }
 }
