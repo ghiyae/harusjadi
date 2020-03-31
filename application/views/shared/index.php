@@ -71,11 +71,12 @@
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
               <h6 class="collapse-header">Item List :</h6>
-              <a class="collapse-item" href="<?php echo base_url('member')?>"><i class="fas fa-address-card"></i>Member</a></th>
+             <!--  <a class="collapse-item" href="<?php echo base_url('member')?>"><i class="fas fa-address-card"></i>Member</a></th>
               <a class="collapse-item" href="<?php echo base_url('category')?>"><i class="fas fa-bars"></i>Categoty</a>
               <a class="collapse-item" href="<?php echo base_url('cashin')?>"><i class="fa fa-book"></i>Cash In</a>
-              <a class="collapse-item" href="<?php echo base_url('cashout')?>"><i class="fas fa-dolly"></i>Cash Out</a>
+              <a class="collapse-item" href="<?php echo base_url('cashout')?>"><i class="fas fa-dolly"></i>Cash Out</a> -->
               <a class="collapse-item" href="<?php echo base_url('transaksi')?>"><i class="fas fa-money-bill-wave"></i>Transaction</a>
+              <a class="collapse-item" href="<?php echo base_url('report')?>"><i class="fas fa-chart-line"></i>Report</a>
             </div>
           </div>
         </li>
