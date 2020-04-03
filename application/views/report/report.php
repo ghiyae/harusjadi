@@ -16,7 +16,7 @@
         Silahkan masukan tanggal awal dan tanggal akhir untuk menampilkan laporan!
       </div>
 
-      <form action="<?=base_url('#') ?>" method="post">
+      <form action="<?=base_url('report/tampil_report') ?>" method="post">
             <div class="row">
               <div class="col-4">
                 <div class="input-group">
