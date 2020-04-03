@@ -41,8 +41,8 @@
               <div class="col-lg-12">
                 <div class="p-5">
                   <div class="text-center">
-                    <img src="<?php echo base_url('img/tsmu.jpg')?>" class="img-fluid mb-4 img-thumbnail" alt="Responsive image">
-                    <h1 class="h4 text-gray-900 mb-4"><b>LOGIN</b></h1>
+                    <img src="<?php echo base_url('img/logo.png')?>" class="img-fluid mb-0 " alt="Responsive image">
+                    <h1 class="h4 text-gray-900 mb-2"><b>LOGIN</b></h1>
                     <hr>
                   </div>
                   <form class="user" action="<?php echo base_url('auth/process')?>" method="post">
