@@ -8,7 +8,7 @@
 
                   <form method="post" action="">
                     <div class="form-row">
-                      <div class="form-group col-md-3">
+                      <div class="form-group col-md-3"><i class="far fa-calendar-alt"></i>
                         <label for="tanggal">Tanggal</label>
                         <input type="date" class="form-control <?php echo form_error('tanggal')?'is-invalid':'' ?>" id="tanggal" name="tanggal">
                         <div class="invalid-feedback">
