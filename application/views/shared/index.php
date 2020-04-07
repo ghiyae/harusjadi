@@ -150,7 +150,7 @@
                  ?>
                  <div class="topbar-divider d-none d-sm-block"></div>
                  <span class="mr-2 d-none d-lg-inline text-gray-600 small">Hello <?= ucfirst($this->session->userdata('username')) ?></span>
-                 <img class="img-profile rounded-circle" src="<?php echo base_url('img/nabhil.jpg')?>">
+                 <img class="img-profile rounded-circle" src="<?php echo base_url('img/admin2.png')?>">
                </a>
                <!-- Dropdown - User Information -->
                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
