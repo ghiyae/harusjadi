@@ -43,7 +43,7 @@
                     <i class="fas fa-edit"></i>
                   </span>
                   <span class="text">Edit</span></a>
-                  <a onclick="deleteConfirm('<?=site_url('member/delete/'.$key->member_id)?>')" href="#!" class="btn btn-danger btn-icon-split">
+                  <a href="('<?=site_url('member/delete/'.$key->member_id)?>')" href="#!" class="btn btn-danger btn-icon-split">
                     <span class="icon text-white-50">
                       <i class="fas fa-trash"></i>
                     </span>

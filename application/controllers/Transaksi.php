@@ -115,7 +115,7 @@ public function edit1($id=null)
     {
         $this->transaksi_model->delete($id);
         if ($this->db->affected_rows() > 0){
-            $this->session->set_flashdata('success','Data Transaksi Cash In Berhsil Dihapus!');
+            $this->session->set_flashdata('success','Data Transaksi Cash In Berhasil Dihapus!');
             redirect('transaksi','refresh');
         }
     }
