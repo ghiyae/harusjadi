@@ -17,31 +17,56 @@
       </div>
 
       <form action="<?=base_url('report/tampil_report') ?>" method="post">
-            <div class="row">
-              <div class="col-4">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
-                  </div>
-                  <input type="date" class="form-control" id="tglmulai" name="tglmulai">
-                </div>
-              </div>
-              s/d
-              <div class="col-4">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text"><i class="far fa-calendar-alt"></i></div>
-                  </div>
-                  <input type="date" class="form-control" id="tglakhir" name="tglakhir">
-                </div>
-              </div>
-              <div class="col-2">
-                <button type="submit" class="btn btn-primary ">Submit</button>
-              </div>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <!-- <label for="blnawal">Bulan Awal</label> -->
+            <select id="blnawal" class="form-control <?php echo form_error('blnawal')?'is-invalid':'' ?>" name="blnawal">
+              <option hidden value="" selected>Pilih Bulan Awal</option>
+              <option>Januari</option>
+              <option>Februari</option>
+              <option>Maret</option>
+              <option>April</option>
+              <option>Mei</option>
+              <option>Juni</option>
+              <option>Juli</option>
+              <option>Agustus</option>
+              <option>September</option>
+              <option>Oktober</option>
+              <option>November</option>
+              <option>Desember</option>
+            </select>
+            <div class="invalid-feedback">
+              <?php echo form_error('blnawal') ?>
             </div>
-          </form>
+          </div>
+          <div class="form-group col-md-3">
+            <!-- <label for="blnakhir">Bulan Akhir</label> -->
+            <select id="blnakhir" class="form-control <?php echo form_error('blnakhir')?'is-invalid':'' ?>" name="blnakhir">
+              <option hidden value="" selected>Pilih Bulan Akhir</option>
+              <option>Januari</option>
+              <option>Februari</option>
+              <option>Maret</option>
+              <option>April</option>
+              <option>Mei</option>
+              <option>Juni</option>
+              <option>Juli</option>
+              <option>Agustus</option>
+              <option>September</option>
+              <option>Oktober</option>
+              <option>November</option>
+              <option>Desember</option>
+            </select>
+            <div class="invalid-feedback">
+              <?php echo form_error('blnakhir') ?>
+            </div>
+          </div>
+          <div class="col-2">
+            <button type="submit" class="btn btn-primary ">Submit</button>
+          </div>
         </div>
       </div>
-    </div>
+    </form>
   </div>
+</div>
+</div>
 </div>
